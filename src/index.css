@@ -1,0 +1,21 @@
+.inline {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.highlight {
+  color: darkgreen;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
+.backgroundColor {
+  background-color: gray;
+  border-radius: 25px;
+  border: 2px;
+  border-color: gray;
+  margin: 10px;
+  padding: 5px;
+}

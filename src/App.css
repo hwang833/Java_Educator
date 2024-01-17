@@ -1,0 +1,101 @@
+html, body, #root, #root>div {
+  height: 100%
+}
+
+.sign-in-container {
+  margin-top: 20vh;
+}
+
+.sign-in-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.sign-in-header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sideBorder {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.scoreHeader {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.scoreSecondaryHeaders {
+  margin-bottom: 1rem;
+}
+
+.user {
+  margin-bottom: 1rem;
+}

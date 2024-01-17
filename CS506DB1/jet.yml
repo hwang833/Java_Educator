@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db2:
+    image: mysql/mysql-server:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: UserValues
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - jetX:/var/lib/mysql
+    ports:
+      - "33306:3306"
+volumes:
+  jetX:

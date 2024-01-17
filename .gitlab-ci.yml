@@ -1,0 +1,42 @@
+#our project is maven (spring-boot)
+image: maven:latest
+
+#define all the stages of CICD here: (CI: build, test) (CD: package, deploy)
+stages:          
+  - build
+  - test
+  - package
+  - deploy
+
+#compile the backend for testing
+build-job:       
+  stage: build
+  script:
+    - "cd Backend_eddie/Spring-boot-stuff/JavaEducator"
+    - echo "Compiling the code..."
+    - "mvn compile"
+    - echo "Compile complete."
+
+#run the unit tests defined in "Backend_eddie/Spring-boot-stuff/JavaEducator/src/test/"
+test-job:   
+  stage: test
+  script:
+    - "cd Backend_eddie/Spring-boot-stuff/JavaEducator"
+    - echo "Running unit tests.."
+    - "mvn test"
+
+#packaging the code does nothing for us, but would be used for the next step.
+package-job:   
+  stage: test   
+  script:
+    - "cd Backend_eddie/Spring-boot-stuff/JavaEducator"
+    - echo "Package the code"
+    - "mvn package"
+
+
+#does nothing right now, but ideally would deploy to a server that hosts our app.
+deploy-job:      
+  stage: deploy  
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."

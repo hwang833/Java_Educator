@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+<body>
+    <div id="data-container"></div>
+
+    <script>
+        // JavaScript code to fetch data from the backend
+        fetch('/api/data')
+            .then(response => response.json())
+            .then(data => {
+                // Handle data received from the backend
+                document.getElementById('data-container').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>
